@@ -1,0 +1,37 @@
+{% if config('ActBrevoChatWidget.config.brevoChatActive') and config('ActBrevoChatWidget.config.brevoConversationsID') %}
+    {% set brevoConversationsID = config('ActBrevoChatWidget.config.brevoConversationsID') %}
+    {% set consentType = page.brevoConsentType ?? config('ActBrevoChatWidget.config.consentType') %}
+
+    {% if consentType == 'shopware' %}
+
+        {% if app.request.cookies.get('brevo-chat-widget') == 1 %}
+
+            <script>
+                (function(d, w, c) {
+                    w.BrevoConversationsID = '{{ brevoConversationsID }}';
+                    w[c] = w[c] || function() {
+                        (w[c].q = w[c].q || []).push(arguments);
+                    };
+                    var s = d.createElement('script');
+                    s.async = true;
+                    s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+                    if (d.head) d.head.appendChild(s);
+                })(document, window, 'BrevoConversations');
+            </script>
+        {% endif %}
+    {% elseif consentType == 'none' %}
+
+        <script>
+            (function(d, w, c) {
+                w.BrevoConversationsID = '{{ brevoConversationsID }}';
+                w[c] = w[c] || function() {
+                    (w[c].q = w[c].q || []).push(arguments);
+                };
+                var s = d.createElement('script');
+                s.async = true;
+                s.src = 'https://conversations-widget.brevo.com/brevo-conversations.js';
+                if (d.head) d.head.appendChild(s);
+            })(document, window, 'BrevoConversations');
+        </script>
+    {% endif %}
+{% endif %}

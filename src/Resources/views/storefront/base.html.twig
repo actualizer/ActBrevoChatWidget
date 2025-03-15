@@ -1,0 +1,6 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% block base_head %}
+    {{ parent() }}
+    {% include '@ActBrevoChatWidget/storefront/brevo_chat_widget.html.twig' %}
+{% endblock %}

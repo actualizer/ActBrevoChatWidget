@@ -1,0 +1,12 @@
+{
+    "cookie": {
+        "groupChat": "Chat and Communication",
+        "groupChatDescription": "These cookies are used to enable chat and communication features on the website."
+    },
+    "brevo": {
+        "cookie": {
+            "name": "Brevo Chat Widget",
+            "description": "This cookie is used to enable the Brevo Chat Widget, which allows you to communicate with customer service."
+        }
+    }
+}

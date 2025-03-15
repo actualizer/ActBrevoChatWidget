@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title lang="de-DE">Brevo Chat Widget Einstellungen</title>
+        <title lang="en-GB">Brevo Chat Widget Settings</title>
+
+        <input-field type="bool">
+            <name>brevoChatActive</name>
+            <label lang="de-DE">Brevo Chat Widget aktiv</label>
+            <label lang="en-GB">Brevo Chat Widget Active</label>
+        </input-field>
+
+        <input-field>
+            <name>brevoConversationsID</name>
+            <label lang="de-DE">Brevo Conversations ID</label>
+            <label lang="en-GB">Brevo Conversations ID</label>
+            <helpText lang="de-DE">Die Brevo Conversations ID findest du in deinem Brevo Account.</helpText>
+            <helpText lang="en-GB">You can find the Brevo Conversations ID in your Brevo account.</helpText>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>consentType</name>
+            <label lang="de-DE">Cookie Consent Management</label>
+            <label lang="en-GB">Cookie Consent Management</label>
+            <options>
+                <option>
+                    <id>none</id>
+                    <name lang="de-DE">Ohne Consent</name>
+                    <name lang="en-GB">Without Consent</name>
+                </option>
+                <option>
+                    <id>shopware</id>
+                    <name lang="de-DE">Shopware Cookie Consent</name>
+                    <name lang="en-GB">Shopware Cookie Consent</name>
+                </option>
+            </options>
+            <defaultValue>shopware</defaultValue>
+        </input-field>
+
+    </card>
+
+</config>
