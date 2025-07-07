@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "shopware/core": "^6.5.0"
+        "php": ">=8.3",
+        "shopware/core": ">=6.6.10 <6.8.0",
     },
     "extra": {
         "shopware-plugin-class": "Act\\BrevoChatWidget\\ActBrevoChatWidget",
@@ -21,14 +22,6 @@
         "description": {
             "de-DE": "DSGVO-konforme Integration des Brevo Chat Widgets mit Shopware Cookie Consent",
             "en-GB": "GDPR-compliant integration of the Brevo Chat Widget with Shopware Cookie Consent"
-        },
-        "manufacturerLink": {
-            "de-DE": "https://www.actualize.de",
-            "en-GB": "https://www.actualize.de"
-        },
-        "supportLink": {
-            "de-DE": "https://www.actualize.de",
-            "en-GB": "https://www.actualize.de"
         }
     },
     "autoload": {
