@@ -6,7 +6,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Actualize"
+            "name": "Actualize",
+            "homepage": "https://www.actualize.de"
         }
     ],
     "require": {
@@ -22,14 +23,6 @@
         "description": {
             "de-DE": "DSGVO-konforme Integration des Brevo Chat Widgets mit Shopware Cookie Consent",
             "en-GB": "GDPR-compliant integration of the Brevo Chat Widget with Shopware Cookie Consent"
-        },
-        "manufacturerLink": {
-            "de-DE": "https://www.actualize.de",
-            "en-GB": "https://www.actualize.de"
-        },
-        "supportLink": {
-            "de-DE": "https://www.actualize.de",
-            "en-GB": "https://www.actualize.de"
         }
     },
     "autoload": {
