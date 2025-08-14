@@ -7,8 +7,8 @@ use Shopware\Storefront\Framework\Cookie\CookieProviderInterface;
 
 class CustomCookieProvider implements CookieProviderInterface
 {
-    private $originalService;
-    private $systemConfigService;
+    private CookieProviderInterface $originalService;
+    private SystemConfigService $systemConfigService;
 
     public function __construct(
         CookieProviderInterface $service,

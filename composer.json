@@ -2,7 +2,7 @@
     "name": "act/brevo-chat-widget",
     "description": "Actualize: Brevo Chat Widget - DSGVO-konforme Integration des Brevo Chat Widgets",
     "type": "shopware-platform-plugin",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=8.3",
-        "shopware/core": ">=6.6.10 <6.8.0",
+        "shopware/core": "^6.5.0 || ^6.6.0 || ^6.7.0"
     },
     "extra": {
         "shopware-plugin-class": "Act\\BrevoChatWidget\\ActBrevoChatWidget",
@@ -22,6 +22,14 @@
         "description": {
             "de-DE": "DSGVO-konforme Integration des Brevo Chat Widgets mit Shopware Cookie Consent",
             "en-GB": "GDPR-compliant integration of the Brevo Chat Widget with Shopware Cookie Consent"
+        },
+        "manufacturerLink": {
+            "de-DE": "https://www.actualize.de",
+            "en-GB": "https://www.actualize.de"
+        },
+        "supportLink": {
+            "de-DE": "https://www.actualize.de",
+            "en-GB": "https://www.actualize.de"
         }
     },
     "autoload": {

@@ -1,10 +1,11 @@
 {% if config('ActBrevoChatWidget.config.brevoChatActive') and config('ActBrevoChatWidget.config.brevoConversationsID') %}
     {% set brevoConversationsID = config('ActBrevoChatWidget.config.brevoConversationsID') %}
-    {% set consentType = page.brevoConsentType ?? config('ActBrevoChatWidget.config.consentType') %}
+    {% set consentType = page.brevoConsentType|default(config('ActBrevoChatWidget.config.consentType')) %}
 
     {% if consentType == 'shopware' %}
-
-        {% if app.request.cookies.get('brevo-chat-widget') == 1 %}
+        {# Check cookie value explicitly - must be string '1' to show widget #}
+        {% set cookieValue = app.request.cookies.get('brevo-chat-widget') %}
+        {% if cookieValue == '1' or cookieValue == 1 %}
 
             <script>
                 (function(d, w, c) {
