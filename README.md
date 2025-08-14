@@ -84,8 +84,20 @@ ActBrevoChatWidget/
 │   │   └── Cookie/
 │   │       └── CustomCookieProvider.php
 │   ├── Resources/
+│   │   ├── app/
+│   │   │   └── storefront/
+│   │   │       ├── dist/
+│   │   │       │   └── storefront/
+│   │   │       │       └── js/
+│   │   │       │           └── act-brevo-chat-widget/
+│   │   │       │               └── act-brevo-chat-widget.js
+│   │   │       └── src/
+│   │   │           ├── cookie-consent/
+│   │   │           │   └── cookie-consent-handler.js
+│   │   │           └── main.js
 │   │   ├── config/
 │   │   │   ├── config.xml
+│   │   │   ├── plugin.png
 │   │   │   └── services.xml
 │   │   ├── snippet/
 │   │   │   ├── de_DE/
@@ -94,8 +106,8 @@ ActBrevoChatWidget/
 │   │   │       └── storefront.en-GB.json
 │   │   └── views/
 │   │       └── storefront/
-│   │           └── layout/
-│   │               └── meta.html.twig
+│   │           ├── base.html.twig
+│   │           └── brevo_chat_widget.html.twig
 │   └── Subscriber/
 │       └── StorefrontRenderSubscriber.php
 ```
