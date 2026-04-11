@@ -4,14 +4,14 @@ A Shopware 6 plugin that provides GDPR-compliant integration of the Brevo Chat W
 
 ## Features
 
-- ✅ Easy integration of Brevo Chat Widget
-- ✅ GDPR-compliant implementation with cookie consent management
-- ✅ Integration with Shopware's native cookie consent system
-- ✅ Configurable consent types (with/without consent)
-- ✅ Admin configuration for Brevo Conversations ID
-- ✅ Automatic widget loading based on consent status
-- ✅ Multi-language support (German & English)
-- ✅ Compatible with Shopware 6.6.10 - 6.7.x
+- Easy integration of Brevo Chat Widget
+- GDPR-compliant implementation with cookie consent management
+- Integration with Shopware's native cookie consent system
+- Configurable consent types (with/without consent)
+- Admin configuration for Brevo Conversations ID
+- Automatic widget loading based on consent status
+- Multi-language support (German & English)
+- Compatible with Shopware 6.6.10 - 6.7.x
 
 ## Requirements
 
@@ -70,47 +70,6 @@ A Shopware 6 plugin that provides GDPR-compliant integration of the Brevo Chat W
 - Injects widget configuration variables into Twig templates
 - Supports conditional loading based on consent status
 - No template modifications required - uses Shopware's extension system
-
-## File Structure
-
-```
-ActBrevoChatWidget/
-├── composer.json
-├── LICENSE
-├── README.md
-├── src/
-│   ├── ActBrevoChatWidget.php
-│   ├── Decorator/
-│   │   └── Cookie/
-│   │       └── CustomCookieProvider.php
-│   ├── Resources/
-│   │   ├── app/
-│   │   │   └── storefront/
-│   │   │       ├── dist/
-│   │   │       │   └── storefront/
-│   │   │       │       └── js/
-│   │   │       │           └── act-brevo-chat-widget/
-│   │   │       │               └── act-brevo-chat-widget.js
-│   │   │       └── src/
-│   │   │           ├── cookie-consent/
-│   │   │           │   └── cookie-consent-handler.js
-│   │   │           └── main.js
-│   │   ├── config/
-│   │   │   ├── config.xml
-│   │   │   ├── plugin.png
-│   │   │   └── services.xml
-│   │   ├── snippet/
-│   │   │   ├── de_DE/
-│   │   │   │   └── storefront.de-DE.json
-│   │   │   └── en_GB/
-│   │   │       └── storefront.en-GB.json
-│   │   └── views/
-│   │       └── storefront/
-│   │           ├── base.html.twig
-│   │           └── brevo_chat_widget.html.twig
-│   └── Subscriber/
-│       └── StorefrontRenderSubscriber.php
-```
 
 ## Development
 
