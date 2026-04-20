@@ -11,6 +11,7 @@
         <service id="Act\BrevoChatWidget\Decorator\Cookie\CustomCookieProvider" decorates="Shopware\Storefront\Framework\Cookie\CookieProviderInterface">
             <argument type="service" id="Act\BrevoChatWidget\Decorator\Cookie\CustomCookieProvider.inner"/>
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="request_stack"/>
         </service>
     </services>
 </container>

@@ -2,20 +2,25 @@
 
 namespace Act\BrevoChatWidget\Decorator\Cookie;
 
+use Shopware\Core\PlatformRequest;
 use Shopware\Core\System\SystemConfig\SystemConfigService;
 use Shopware\Storefront\Framework\Cookie\CookieProviderInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 class CustomCookieProvider implements CookieProviderInterface
 {
     private CookieProviderInterface $originalService;
     private SystemConfigService $systemConfigService;
+    private RequestStack $requestStack;
 
     public function __construct(
         CookieProviderInterface $service,
-        SystemConfigService $systemConfigService
+        SystemConfigService $systemConfigService,
+        RequestStack $requestStack
     ) {
         $this->originalService = $service;
         $this->systemConfigService = $systemConfigService;
+        $this->requestStack = $requestStack;
     }
 
     private const singleCookie = [
@@ -43,9 +48,11 @@ class CustomCookieProvider implements CookieProviderInterface
     public function getCookieGroups(): array
     {
         $cookies = $this->originalService->getCookieGroups();
-        
+
+        $salesChannelId = $this->resolveSalesChannelId();
+
         // Prüfe ob Shopware Cookie Consent aktiviert ist
-        $consentType = $this->systemConfigService->get('ActBrevoChatWidget.config.consentType');
+        $consentType = $this->systemConfigService->get('ActBrevoChatWidget.config.consentType', $salesChannelId);
         if ($consentType !== 'shopware') {
             return $cookies;
         }
@@ -68,5 +75,17 @@ class CustomCookieProvider implements CookieProviderInterface
         }
 
         return $cookies;
+    }
+
+    private function resolveSalesChannelId(): ?string
+    {
+        $request = $this->requestStack->getMainRequest();
+        if ($request === null) {
+            return null;
+        }
+
+        $salesChannelId = $request->attributes->get(PlatformRequest::ATTRIBUTE_SALES_CHANNEL_ID);
+
+        return is_string($salesChannelId) ? $salesChannelId : null;
     }
 }
