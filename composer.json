@@ -2,7 +2,7 @@
     "name": "act/brevo-chat-widget",
     "description": "Actualize: Brevo Chat Widget - DSGVO-konforme Integration des Brevo Chat Widgets",
     "type": "shopware-platform-plugin",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "license": "MIT",
     "authors": [
         {
