@@ -11,6 +11,7 @@ class StorefrontRenderSubscriber implements EventSubscriberInterface
 {
     const CONFIG_PATH = 'ActBrevoChatWidget.config';
 
+    /** @var array<string, mixed>|null */
     private $config = null;
 
     /**
@@ -32,13 +33,14 @@ class StorefrontRenderSubscriber implements EventSubscriberInterface
         ];
     }
 
-    public function onPageLoaded(PageLoadedEvent $event)
+    public function onPageLoaded(PageLoadedEvent $event): void
     {
         $request = $event->getRequest();
         $salesChannelId = $request->attributes->get(PlatformRequest::ATTRIBUTE_SALES_CHANNEL_CONTEXT_OBJECT)->getSalesChannelId();
         
         // Load all config values
-        $this->config = $this->systemConfigService->get(self::CONFIG_PATH, $salesChannelId);
+        $config = $this->systemConfigService->get(self::CONFIG_PATH, $salesChannelId);
+        $this->config = is_array($config) ? $config : null;
         
         // Check if chat widget is active
         if (empty($this->config['brevoChatActive']) || empty($this->config['brevoConversationsID'])) {

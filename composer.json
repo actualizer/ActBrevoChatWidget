@@ -2,17 +2,23 @@
     "name": "act/brevo-chat-widget",
     "description": "Actualize: Brevo Chat Widget - DSGVO-konforme Integration des Brevo Chat Widgets",
     "type": "shopware-platform-plugin",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "license": "MIT",
     "authors": [
         {
             "name": "Actualize",
-            "homepage": "https://www.actualize.de"
+            "email": "plugin@actualize.de",
+            "homepage": "https://actualize.de",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": ">=8.3",
         "shopware/core": "^6.5.0 || ^6.6.0 || ^6.7.0"
+    },
+    "scripts": {
+        "format": "docker run --rm -v $(pwd):/ext shopware/shopware-cli:latest extension format /ext",
+        "check": "docker run --rm -v $(pwd):/ext shopware/shopware-cli:latest extension validate --full /ext"
     },
     "extra": {
         "shopware-plugin-class": "Act\\BrevoChatWidget\\ActBrevoChatWidget",
@@ -21,8 +27,16 @@
             "en-GB": "Actualize: Brevo Chat Widget"
         },
         "description": {
-            "de-DE": "DSGVO-konforme Integration des Brevo Chat Widgets mit Shopware Cookie Consent",
-            "en-GB": "GDPR-compliant integration of the Brevo Chat Widget with Shopware Cookie Consent"
+            "de-DE": "DSGVO-konforme Integration des Brevo Chat Widgets in den Storefront, das den Chat erst nach Zustimmung über den Shopware Cookie Consent lädt und je Sales Channel steuerbar ist.",
+            "en-GB": "GDPR-compliant integration of the Brevo chat widget into the storefront, loading the chat only after consent via the Shopware cookie consent and configurable per sales channel."
+        },
+        "manufacturerLink": {
+            "de-DE": "https://actualize.de",
+            "en-GB": "https://actualize.de"
+        },
+        "supportLink": {
+            "de-DE": "https://actualize.de",
+            "en-GB": "https://actualize.de"
         }
     },
     "autoload": {

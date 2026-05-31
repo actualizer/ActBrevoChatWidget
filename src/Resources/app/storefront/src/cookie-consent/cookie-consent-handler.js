@@ -1,5 +1,6 @@
-import Plugin from 'src/plugin-system/plugin.class';
 import { COOKIE_CONFIGURATION_UPDATE } from 'src/plugin/cookie/cookie-configuration.plugin';
+
+const Plugin = window.PluginBaseClass;
 
 /**
  * Shopware's CookieConfiguration_Update event only carries cookies that
