@@ -8,10 +8,9 @@
             <tag name="kernel.event_subscriber"/>
         </service>
 
-        <service id="Act\BrevoChatWidget\Decorator\Cookie\CustomCookieProvider" decorates="Shopware\Storefront\Framework\Cookie\CookieProviderInterface">
-            <argument type="service" id="Act\BrevoChatWidget\Decorator\Cookie\CustomCookieProvider.inner"/>
+        <service id="Act\BrevoChatWidget\Subscriber\CookieGroupCollectSubscriber">
             <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
-            <argument type="service" id="request_stack"/>
+            <tag name="kernel.event_subscriber"/>
         </service>
     </services>
 </container>
