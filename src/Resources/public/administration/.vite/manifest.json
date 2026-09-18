@@ -1,0 +1,11 @@
+{
+  "main.js": {
+    "file": "assets/act-brevo-chat-widget-CxIEofBZ.js",
+    "name": "act-brevo-chat-widget",
+    "src": "main.js",
+    "isEntry": true,
+    "css": [
+      "assets/act-brevo-chat-widget-CHo7KLRh.css"
+    ]
+  }
+}

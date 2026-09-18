@@ -1,0 +1,25 @@
+{
+  "base": "/bundles/actbrevochatwidget/administration/",
+  "entryPoints": {
+    "act-brevo-chat-widget": {
+      "css": [
+        "/bundles/actbrevochatwidget/administration/assets/act-brevo-chat-widget-CHo7KLRh.css"
+      ],
+      "dynamic": [],
+      "js": [
+        "/bundles/actbrevochatwidget/administration/assets/act-brevo-chat-widget-CxIEofBZ.js"
+      ],
+      "legacy": false,
+      "preload": []
+    }
+  },
+  "legacy": false,
+  "metadatas": {},
+  "version": [
+    "7.1.0",
+    7,
+    1,
+    0
+  ],
+  "viteServer": null
+}

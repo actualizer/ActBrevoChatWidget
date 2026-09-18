@@ -1,0 +1,18 @@
+{
+    "act-brevo-chat-widget": {
+        "settings": {
+            "info": {
+                "howTo": {
+                    "title": "So funktioniert's",
+                    "item1": "Ohne gültige <strong>Brevo Conversations ID</strong> erscheint kein Widget, auch wenn <strong>Brevo Chat Widget aktiv</strong> gesetzt ist — eine Fehlermeldung gibt es dazu nicht.",
+                    "item2": "<strong>Cookie Consent Management</strong> entscheidet, ob das Widget erst nach Zustimmung lädt oder sofort.",
+                    "item3": "Bei Zustimmungspflicht erscheint in der Cookie-Verwaltung der Storefront zusätzlich die Kategorie <strong>Chat und Kommunikation</strong>.",
+                    "item4": "Das Widget reagiert sofort auf eine geänderte Zustimmung, ohne dass die Seite neu geladen werden muss.",
+                    "item5": "Die Einstellungen gelten je Verkaufskanal — die Auswahl steht oben auf dieser Seite."
+                },
+                "description": "DSGVO-konforme Integration des Brevo Chat Widgets in den Storefront, das den Chat erst nach Zustimmung über den Shopware Cookie Consent lädt und je Sales Channel steuerbar ist.",
+                "issues": "Probleme oder Feature-Wünsche?"
+            }
+        }
+    }
+}
