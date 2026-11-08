@@ -2,6 +2,12 @@
 
 A Shopware 6 plugin that provides GDPR-compliant integration of the Brevo Chat Widget with configurable consent management and seamless Shopware cookie integration.
 
+## Requirements
+
+- Shopware `>=6.7.3 <6.8`, tested with 6.7.16.0
+- PHP 8.4 or higher
+- Valid Brevo account with Conversations feature
+
 ## Features
 
 - Easy integration of Brevo Chat Widget
@@ -11,12 +17,6 @@ A Shopware 6 plugin that provides GDPR-compliant integration of the Brevo Chat W
 - Admin configuration for Brevo Conversations ID
 - Automatic widget loading based on consent status
 - Multi-language support (German & English)
-
-## Requirements
-
-- Shopware `>=6.7.3 <6.8`, tested with 6.7.16.0
-- PHP 8.4 or higher
-- Valid Brevo account with Conversations feature
 
 ## Installation
 
