@@ -43,7 +43,7 @@ class StorefrontRenderSubscriber implements EventSubscriberInterface
         $this->config = is_array($config) ? $config : null;
         
         // Check if chat widget is active
-        if (empty($this->config['brevoChatActive']) || empty($this->config['brevoConversationsID'])) {
+        if (!(bool) ($this->config['brevoChatActive'] ?? false) || !(bool) ($this->config['brevoConversationsID'] ?? false)) {
             return;
         }
 
